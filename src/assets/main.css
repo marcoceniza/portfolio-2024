@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.wrapper {width: 1200px; max-width: 100%; position: relative; overflow: hidden;}
-.textColor {background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-.bgColor {background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));}
+.wrapper {
+  width: 1200px;
+   max-width: 100%;
+   position: relative;
+   overflow: hidden;
+}
+.textColor {
+  background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+  -moz-background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+  -webkit-background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bgColor {
+  background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+}
+.toggle{
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  z-index: 3;
+}

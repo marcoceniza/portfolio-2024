@@ -4,6 +4,7 @@ import { defineStore } from 'pinia';
 export const useCustomStore = defineStore('custom', () => {
     const fullText = ref('WEB DEVELOPER');
     const typedText = ref('');
+    const toggleNavbar = ref(false);
 
     const typeWriter = () => {
         let i = 0;
@@ -24,5 +25,19 @@ export const useCustomStore = defineStore('custom', () => {
         }
     } 
 
-  return { fullText, typedText, scrollToSection }
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.scrollY;
+        let currentWidth = window.innerWidth;
+
+        if (currentScroll > 200 && currentWidth !== 1000) toggleNavbar.value = true;
+        else toggleNavbar.value = false;
+    });
+
+     return { 
+        // functions
+        scrollToSection,
+
+        // variables 
+        fullText, typedText, toggleNavbar
+    }
 })
